@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "dev:network": "astro dev --host",
+    "dev:network": "astro dev --host --port 5174",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "preview:network": "astro preview --host",
+    "preview:network": "astro preview --host --port 5173",
     "astro": "astro",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"

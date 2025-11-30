@@ -32,44 +32,37 @@ const work = await Promise.all(
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
-    <h4 class="animate font-semibold text-black dark:text-white">
-      Why hello. How did you find me.  
+    <h4 class="animate font-semibold text-black dark:text-white animate">
+      This is a personal blog for the person "Kenzo Johnson"
     </h4>
     <div class="space-y-16">
       <section>
-        <article class="space-y-4">
+        <article class="space-y-4 animate">
           <p class="animate">
-            Why am I writing this
-            Because I'm interested in the following categories and my ass needs to complete a checkbox in order to feel any semblance of achievement. Core principles of the site include: 
+            This is both my website to showcase personal projects and soon-to-be blog going over the following topics I'm interested in:
           </p>
             <ul class="animate">
               <li>Privacy</li>
               <li>Homelabbing</li>
               <li>Activism</li>
               <li>Capitalism</li>
-              <li>Running an Ethical Company</li>
               <li>Personal rants</li>
             </ul>
-            <p class="animate">
-            These all sound like varied topics that don't relate at all, which is true if you werent me. 
-            All my endeavors have always been about pursuding people (I'll get into that in a more personal post later). The problem is that as our society becomes more and more attention focused (see Kyla Scanlon for more about the attention economy), we start to commodify 
-            </p>
-          <h2>Who am I to say I'm an expert at these topics</h2>
-          <p class="animate">
-            - This is a complex questionThis might not be for you.eserved for when i can afford my therapist
-            - I'm funny (?)
-            - I can confidently say I'm not an expert on these topics, but I will say, I will try my best to be as factual as I can
+          <p class='animate'>
+            What I
+
+            Tech stack below. As I'm sure you know, I'm not limited by my tech stack below, just a way for you to understand what I'm familiar with. 
+            I'd say I'm mainly a Python/JS developer.
+
+            Python, Javascript (well, Typescript preferably), Ruby
+            Front End: React, Vue
+            Frameworks: Ruby on Rails, Vite
+            DevOps: Docker, CI/CD, Git/GitHub
+
+            Some basic familiarity in Node.js, Express.js, C++ 
+
+
           </p>
-            <h2>Why a lighthouse?</h2>
-            <p class="animate">
-              Why anonymous reader 
-            </p>
-            <h2>What to expect</h2>
-            <p class="animate">
-            This is an ever changing blog.
-            This site will never try to make money off you. This includes selling any information to third party advertisers. 
-            Writing and researching these topics will be time consuming, exhausting, error prone, hit-my-head-against-a-wall-difficult, but I hope inspires you in a small way, even it means 
-            </p>
         </article>
       </section>
 
@@ -86,6 +79,24 @@ const work = await Promise.all(
           {blog.map(post => (
             <li>
               <ArrowCard entry={post} />
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="animate space-y-6">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h5 class="font-semibold text-black dark:text-white">
+            Recent projects
+          </h5>
+          <Link href="/projects">
+            See all projects
+          </Link>
+        </div>
+        <ul class="flex flex-col gap-4">
+          {projects.map(project => (
+            <li>
+              <ArrowCard entry={project} />
             </li>
           ))}
         </ul>
@@ -120,23 +131,6 @@ const work = await Promise.all(
         </ul>
       </section>
 
-      <section class="animate space-y-6">
-        <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Recent projects
-          </h5>
-          <Link href="/projects">
-            See all projects
-          </Link>
-        </div>
-        <ul class="flex flex-col gap-4">
-          {projects.map(project => (
-            <li>
-              <ArrowCard entry={project} />
-            </li>
-          ))}
-        </ul>
-      </section>
 
       <section class="animate space-y-4">
         <h5 class="font-semibold text-black dark:text-white">
