@@ -1,0 +1,14 @@
+services:
+  astro:
+    build: .
+    container_name: astro-site
+    restart: unless-stopped
+    ports:
+      - "4321:4321"        # host:4321 -> container:4321
+    networks:
+      - reverseproxy-nw    # same network as your NPM container
+
+networks:
+  reverseproxy-nw:
+    external: true
+
