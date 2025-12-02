@@ -33,7 +33,7 @@ const work = await Promise.all(
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
     <h4 class="animate font-semibold text-black dark:text-white animate">
-      This is a personal blog for the person "Kenzo Johnson"
+      This is a personal site for "Kenzo Johnson"
     </h4>
     <div class="space-y-16">
       <section>
@@ -52,15 +52,14 @@ const work = await Promise.all(
             What I
 
             Tech stack below. As I'm sure you know, I'm not limited by my tech stack below, just a way for you to understand what I'm familiar with. 
-            I'd say I'm mainly a Python/JS developer.
-
-            Python, Javascript (well, Typescript preferably), Ruby
-            Front End: React, Vue
-            Frameworks: Ruby on Rails, Vite
-            DevOps: Docker, CI/CD, Git/GitHub
-
-            Some basic familiarity in Node.js, Express.js, C++ 
-
+            I'm mainly Python/JS developer who works with Rails/React at work.
+            <ul class="animate">
+              <li>Python, Javascript (well, Typescript preferably), Ruby</li>
+              <li>Front End: React, Vue</li>
+              <li>Frameworks: Ruby on Rails, Vite</li> 
+              <li>DevOps: Docker, CI/CD, Git/GitHub</li>
+              <li>Some basic familiarity in Node.js, Express.js, C++ </li>
+            </ul>
 
           </p>
         </article>
@@ -102,35 +101,6 @@ const work = await Promise.all(
         </ul>
       </section>
 
-      <section class="animate space-y-6">
-        <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Work Experience
-          </h5>
-          <Link href="/work">
-            See all work
-          </Link>
-        </div>
-        <ul class="flex flex-col space-y-4">
-          {work.map(entry => (
-            <li>
-              <div class="text-sm opacity-75">
-                {dateRange(entry.data.dateStart, entry.data.dateEnd)}
-              </div>
-              <div class="font-semibold text-black dark:text-white">
-                {entry.data.company}
-              </div>
-              <div class="text-sm opacity-75">
-                {entry.data.role}
-              </div>
-              <article>
-                <entry.Content />
-              </article>
-            </li>
-          ))}
-        </ul>
-      </section>
-
 
       <section class="animate space-y-4">
         <h5 class="font-semibold text-black dark:text-white">
@@ -148,7 +118,6 @@ const work = await Promise.all(
               <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
                 {SOCIAL.NAME}
               </Link>
-              {"/"}
             </li>
           ))}
           <li class="line-clamp-1">
@@ -157,6 +126,9 @@ const work = await Promise.all(
             </Link>
           </li>
         </ul>
+          <Link href="/work">
+            See all work
+          </Link>
       </section>
     </div>
   </Container>

@@ -73,5 +73,7 @@ html.scrolled #back-to-top {
 }
 
 li {
-
+  @apply font-serif antialiased;
+  @apply flex flex-col;
+  @apply bg-stone-100 dark:bg-stone-900;
 }
