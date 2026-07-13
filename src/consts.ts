@@ -1,7 +1,7 @@
 import type { Site, Metadata, Socials } from "@types";
 
 export const SITE: Site = {
-  NAME: "Kenzo Johnson",
+  NAME: "CJ Felux",
   EMAIL: "ripeness0640@proton.me",
   NUM_POSTS_ON_HOMEPAGE: 3,
   NUM_WORKS_ON_HOMEPAGE: 2,
@@ -19,7 +19,7 @@ export const BLOG: Metadata = {
 };
 
 export const WORK: Metadata = {
-  TITLE: "Work",
+  TITLE: "Resume",
   DESCRIPTION: "where i worked",
 };
 
@@ -28,9 +28,14 @@ export const PROJECTS: Metadata = {
   DESCRIPTION: "what im be working on",
 };
 
+export const ABOUT: Metadata = {
+  TITLE: "About",
+  DESCRIPTION: "get in touch",
+};
+
 export const SOCIALS: Socials = [
-  { 
+  {
     NAME: "github",
-    HREF: "https://github.com/KenzoJ"
-  }
-]
+    HREF: "https://github.com/KenzoJ",
+  },
+];
