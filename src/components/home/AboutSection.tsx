@@ -14,13 +14,15 @@ export default function AboutSection() {
         aria-hidden="true"
       />
 
-      <h2 className="font-semibold text-black dark:text-white">About me</h2>
+      <h2 className="font-semibold text-3xl text-black dark:text-white">
+        About me
+      </h2>
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
         <ol className="space-y-8">
           {leftYears.map((year) => (
             <li key={year} className="bg-transparent space-y-1">
-              <time className="font-semibold text-black dark:text-white">
+              <time className="font-semibold text-3xl text-black dark:text-white">
                 {year}
               </time>
               <p className="text-sm text-black/40 dark:text-white/40">
@@ -33,7 +35,7 @@ export default function AboutSection() {
         <ol className="space-y-8 md:pt-12">
           {rightYears.map((year) => (
             <li key={year} className="bg-transparent space-y-1">
-              <time className="font-semibold text-black dark:text-white">
+              <time className="font-semibold text-3xl text-black dark:text-white">
                 {year}
               </time>
               <p className="text-sm text-black/40 dark:text-white/40">

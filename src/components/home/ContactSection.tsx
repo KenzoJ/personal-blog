@@ -13,7 +13,9 @@ export default function ContactSection({ socials, email }: Props) {
     <section id="contact" className="animate space-y-6">
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12">
         <div className="space-y-4">
-          <h2 className="font-semibold text-black dark:text-white">Contact</h2>
+          <h2 className="font-semibold text-3xl text-black dark:text-white">
+            Contact
+          </h2>
           <ul className="flex flex-col gap-2">
             {socials.map((social) => (
               <li key={social.NAME} className="bg-transparent">
