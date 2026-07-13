@@ -5,10 +5,10 @@ import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
   integrations: [mdx(), sitemap(), tailwind()],
-  site: 'https://kenzojohnson.dev',
+  site: 'https://thelighthousekeeper.dev',
   vite: {
     preview: {
-      allowedHosts: ['kenzojohnson.dev', 'www.kenzojohnson.dev', 'localhost', '127.0.0.1'],
+      allowedHosts: ['thelighthousekeeper.dev', 'https://thelighthousekeeper.dev','localhost', '127.0.0.1'],
     },
   },
-});
+}); 
