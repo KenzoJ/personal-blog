@@ -2,6 +2,7 @@
 title: "Homelab Experience"
 description: "Hands on experience with Docker, linux systems, managing own server" 
 date: "Oct 6 2025"
+tags: ["Docker", "Linux", "Self-hosted"]
 demoURL: " "
 repoURL: " "
 ---

@@ -2,6 +2,7 @@
 title: "Unnamed Company: Hubspot"
 description: "How private can one be on the web and why does it matter"
 date: "Oct 6 2025"
+tags: ["HubSpot", "React", "TypeScript"]
 demoURL: " "
 repoURL: " "
 ---

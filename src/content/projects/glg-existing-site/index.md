@@ -3,6 +3,7 @@
 title: "Unnamed Company: Existing Website"
 description: "Detailing the work done on an older codebase"
 date: "Nov 30 2025"
+tags: ["Rails", "Ruby", "Vue", "RSpec"]
 ---
 
 ### Main Accomplishes

@@ -4,6 +4,7 @@ export type HomepageProject = {
   description: string;
   href: string;
   imageSrc?: string;
+  tags?: string[];
 };
 
 type Props = {
@@ -24,26 +25,38 @@ export default function ProjectsSection({ projects }: Props) {
               className="group relative block overflow-hidden"
             >
               {project.imageSrc ? (
-                <>
-                  <img
-                    src={project.imageSrc}
-                    alt={project.title}
-                    className="block h-auto w-auto max-w-full"
-                  />
-                  <div
-                    className="absolute inset-0 z-10 bg-black/50 transition-opacity duration-300 ease-in-out group-hover:opacity-0"
-                    aria-hidden="true"
-                  />
-                </>
+                <img
+                  src={project.imageSrc}
+                  alt=""
+                  className="block h-auto w-auto max-w-full"
+                />
               ) : (
                 <div
-                  className="flex size-[371px] max-w-full items-center justify-center p-4 text-center text-sm text-black/20 dark:text-white/40"
+                  className="size-[371px] max-w-full bg-black/5 dark:bg-white/10"
                   aria-hidden="true"
-                >
-                  {project.title}
-                </div>
+                />
               )}
-              <span className="sr-only">{project.title}</span>
+              <div
+                className="absolute inset-0 z-10 bg-black/50 transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                aria-hidden="true"
+              />
+              <div className="absolute inset-0 z-20 flex flex-col justify-between p-3 text-left pointer-events-none">
+                <h3 className="w-fit max-w-full bg-black/40 px-1.5 py-0.5 text-sm font-semibold leading-snug text-white backdrop-blur-sm sm:text-base">
+                  {project.title}
+                </h3>
+                {project.tags && project.tags.length > 0 && (
+                  <ul className="flex flex-wrap gap-1.5">
+                    {project.tags.map((tag) => (
+                      <li
+                        key={tag}
+                        className="bg-black/40 px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-white/90 backdrop-blur-sm sm:text-xs"
+                      >
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </a>
           </li>
         ))}

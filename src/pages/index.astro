@@ -25,6 +25,7 @@ const projects = (await getCollection("projects"))
       description: project.data.description,
       href: `/projects/${project.id}`,
       imageSrc: typeof image === "string" ? image : image.src,
+      tags: project.data.tags,
     };
   });
 ---
