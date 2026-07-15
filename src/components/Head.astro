@@ -65,14 +65,11 @@ const { title, description, image = "/nano.png" } = Astro.props;
 <link rel="alternate" type="application/rss+xml" title={SITE.NAME} href={new URL("rss.xml", Astro.site)} />
 
 <script>
-  import type { TransitionBeforeSwapEvent } from "astro:transitions/client";
-  document.addEventListener("astro:before-swap", (e) =>
-    [
-      ...(e as TransitionBeforeSwapEvent).newDocument.head.querySelectorAll(
-        "link[as=\"font\"]"
-      ),
-    ].forEach((link) => link.remove())
-  );
+  document.addEventListener("astro:before-swap", (e) => {
+    e.newDocument.head
+      .querySelectorAll('link[as="font"]')
+      .forEach((link) => link.remove());
+  });
 </script>
 
 <script is:inline>
@@ -107,7 +104,7 @@ const { title, description, image = "/nano.png" } = Astro.props;
 
     window.matchMedia("(prefers-color-scheme: dark)")
       .addEventListener("change", event => {
-        if (localStorage.theme === "system" || !localStorage.theme) {
+        if (localStorage.theme === "system") {
           toggleTheme(event.matches);
         }
       }
@@ -175,8 +172,10 @@ function toggleTheme(dark) {
 
     if (userTheme === "light" || userTheme === "dark") {
       toggleTheme(userTheme === "dark");
-    } else {
+    } else if (userTheme === "system") {
       toggleTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    } else {
+      toggleTheme(true);
     }
   }
 
