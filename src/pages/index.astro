@@ -6,28 +6,19 @@ import ProjectsSection from "@components/home/ProjectsSection";
 // import AboutSection from "@components/home/AboutSection";
 import ContactSection from "@components/home/ContactSection";
 import { SITE, HOME, SOCIALS } from "@consts";
-import project1 from "@assets/home/projects/project1.png";
-import project2 from "@assets/home/projects/project2.png";
-import project3 from "@assets/home/projects/project3.png";
-import project4 from "@assets/home/projects/project4.png";
-
-const projectImages = [project1, project2, project3, project4];
 
 const projects = (await getCollection("projects"))
   .filter(project => !project.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE)
-  .map((project, index) => {
-    const image = projectImages[index];
-    return {
-      id: project.id,
-      title: project.data.title,
-      description: project.data.description,
-      href: `/projects/${project.id}`,
-      imageSrc: typeof image === "string" ? image : image.src,
-      tags: project.data.tags,
-    };
-  });
+  .map((project) => ({
+    id: project.id,
+    title: project.data.title,
+    description: project.data.description,
+    href: `/projects/${project.id}`,
+    imageSrc: project.data.image?.src,
+    tags: project.data.tags,
+  }));
 ---
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>

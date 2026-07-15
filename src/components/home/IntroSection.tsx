@@ -85,8 +85,8 @@ const categories: Category[] = [
 ];
 
 const bioParagraphs = [
-  "I'm CJ, I also go by Kenzo Johnson, and I enjoy writing code in Typescript or Python. I currently work as a full stack developer at a Film company with a Ruby on Rails and Vue codebase.",
-  "I've spent the majority of recent months upgrading the older Rails/Ruby versions to the newer standards. I'm now tackling integrating Hubspot's API with the Rails system.",
+  "I'm CJ, I also go by Kenzo Johnson, and I enjoy writing code in Typescript or Python. I currently work as a full stack developer at a GreenlightGO (Rails).",
+  "I've spent the majority of last year upgrading the older Rails/Ruby versions to the newer standards, and I'm now tackling integrating Hubspot's API with the Rails system.",
   "I'm looking for a new full time role where I can use more Typescript or, fingers crossed, give me an excuse to learn Go.",
 ];
 
@@ -108,7 +108,7 @@ export default function IntroSection() {
             CJ Felux
           </h1>
           <p className="text-lg text-black/70 dark:text-white/80">
-            full stack web developer
+            Full Stack Software Engineer
           </p>
           <div className="space-y-3 text-sm text-black/50 dark:text-white/50">
             {bioParagraphs.map((paragraph) => (
@@ -138,7 +138,7 @@ export default function IntroSection() {
                   tabIndex={0}
                   className={`relative w-[min(11rem,28vw)] cursor-pointer aspect-250/55 border shadow-sm outline-none transition-[transform,box-shadow,filter,opacity] ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:ring-2 focus-visible:ring-white/70 ${
                     isLeaving ? "duration-900" : "duration-420"
-                  } ${index > 0 ? "-mt-1.5 sm:-mt-2" : ""} ${
+                  } ${index > 0 ? "mt-1.5 sm:mt-2" : ""} ${
                     isTop
                       ? "-translate-y-1.5 scale-[1.04] shadow-md grayscale-0 opacity-100"
                       : "translate-y-0 scale-100 grayscale opacity-80"
@@ -146,7 +146,7 @@ export default function IntroSection() {
                   style={{
                     backgroundColor: category.fill,
                     borderColor: category.accent,
-                    marginLeft: `${index * 0.7}rem`,
+                    marginLeft: `${index * 0.45}rem`,
                     zIndex: isTop
                       ? categories.length + 1
                       : isLeaving

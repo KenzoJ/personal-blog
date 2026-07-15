@@ -1,13 +1,14 @@
 ---
-title: "Unnamed Company: Hubspot"
-description: "How private can one be on the web and why does it matter"
+title: "Hubspot API Implementation"
+description: "Assisting in using Hubspot's API with GreenlightGO's backend systems"
 date: "Oct 6 2025"
+image: "./cover.png"
 tags: ["HubSpot", "React", "TypeScript"]
 demoURL: " "
 repoURL: " "
 ---
 
-*Separated from the previous section due to the modern frameworks and ecosystem involved. These highlights focus exclusively on the developer-facing work, though there are many workflows I made that are exclusively in Hubspot.*
+_Separated from the previous section due to the modern frameworks and ecosystem involved. These highlights focus exclusively on the developer-facing work, though there are many workflows I made that are exclusively in Hubspot._
 
 ### Migration
 
@@ -18,11 +19,9 @@ repoURL: " "
 ### Landing Pages
 
 - Built and integrated React components and interactive widgets to create more engaging and dynamic landing pages.
-
 - Developed features during a period when HubSpot’s documentation was being rewritten, requiring grit and more problem-solving than what should have been necessary.
-
 - Designed landing pages to balance developer maintainability with the marketing team’s need for flexible, content-driven customization within HubSpot.
 
 ### Backend APIs
-- Currently implementing a synchronization process between HubSpot data and the existing AWS-hosted backend database
 
+- Implementing synchronization process between HubSpot data and the existing AWS-hosted backend database
