@@ -1,5 +1,5 @@
 ---
-title: "Boot.dev — TypeScript & Go"
+title: "Boot.dev: TypeScript & Go"
 description: "Completing Boot.dev's TypeScript and Go courses with hands-on projects and language fundamentals"
 date: "Jul 14 2026"
 image: "./cover.png"
@@ -13,9 +13,8 @@ Completed Boot.dev’s TypeScript and Go tracks, building language fundamentals 
 ### TypeScript
 
 - Worked through core TypeScript concepts: types, interfaces, generics, and how the type system catches errors before runtime.
-- Built small projects that reinforced everyday patterns used in modern web and backend work.
-  - Links can be seen on github
-- Got comfortable reading and writing typed code with confidence instead of falling back to `any`.
+- Built small projects that reinforced everyday patterns used in modern web and backend work. Links can be seen on github
+- Got comfortable reading and writing typed code with confidence instead of falling back to 'any'.
 
 ### Go
 

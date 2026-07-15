@@ -42,7 +42,11 @@ export default function ContactSection({ socials, email }: Props) {
           </ul>
         </div>
 
-        <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+        <form
+          className="space-y-4"
+          action="https://formspree.io/f/mykrkgol"
+          method="POST"
+        >
           <div className="space-y-1">
             <label
               htmlFor="contact-name"

@@ -102,7 +102,7 @@ export default function IntroSection() {
 
   return (
     <section id="intro" className="animate space-y-6 py-10 sm:py-14">
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-[1fr_auto] md:items-center md:gap-15">
+      <div className="grid grid-cols-1 gap-12 md:grid-cols-[1fr_auto] md:items-center md:gap-15">
         <div className="min-w-0 space-y-3 px-4 sm:px-6">
           <h1 className="font-semibold text-3xl text-black dark:text-white">
             CJ Felux
@@ -136,11 +136,11 @@ export default function IntroSection() {
                   key={category.title}
                   role="button"
                   tabIndex={0}
-                  className={`relative w-[min(11rem,28vw)] cursor-pointer aspect-250/55 border shadow-sm outline-none transition-[transform,box-shadow,filter,opacity] ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:ring-2 focus-visible:ring-white/70 ${
+                  className={`relative @container w-[min(11rem,28vw)] cursor-pointer aspect-250/55 border shadow-sm outline-none transition-[transform,box-shadow,filter,opacity] ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:ring-2 focus-visible:ring-white/70 ${
                     isLeaving ? "duration-900" : "duration-420"
                   } ${index > 0 ? "mt-1.5 sm:mt-2" : ""} ${
                     isTop
-                      ? "-translate-y-1.5 scale-[1.04] shadow-md grayscale-0 opacity-100"
+                      ? "-translate-y-0.55 scale-[1.04] shadow-md grayscale-0 opacity-100"
                       : "translate-y-0 scale-100 grayscale opacity-80"
                   }`}
                   style={{
@@ -164,7 +164,7 @@ export default function IntroSection() {
                     }
                   }}
                 >
-                  <div className="absolute inset-0 flex items-center justify-center px-2 text-center text-xs font-medium text-white sm:text-sm">
+                  <div className="absolute inset-0 flex items-center justify-center px-1 text-center text-[clamp(0.45rem,9cqw,0.875rem)] font-medium leading-tight text-white sm:px-2">
                     {category.title}
                   </div>
                 </div>

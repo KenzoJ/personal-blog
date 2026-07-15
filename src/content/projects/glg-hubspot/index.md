@@ -8,8 +8,6 @@ demoURL: " "
 repoURL: " "
 ---
 
-_Separated from the previous section due to the modern frameworks and ecosystem involved. These highlights focus exclusively on the developer-facing work, though there are many workflows I made that are exclusively in Hubspot._
-
 ### Migration
 
 - Assisted in the migration of key services into the HubSpot ecosystem.
