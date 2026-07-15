@@ -22,7 +22,7 @@ export default function ProjectsSection({ projects }: Props) {
           <li key={project.id} className="w-fit bg-transparent">
             <a
               href={project.href}
-              className="group relative block overflow-hidden"
+              className="group relative block overflow-hidden transition-shadow duration-300 ease-in-out hover:shadow-md"
             >
               {project.imageSrc ? (
                 <img
@@ -41,7 +41,7 @@ export default function ProjectsSection({ projects }: Props) {
                 aria-hidden="true"
               />
               <div className="absolute inset-0 z-20 flex flex-col justify-between p-3 text-left pointer-events-none">
-                <h3 className="w-fit max-w-full bg-black/40 px-1.5 py-0.5 text-sm font-semibold leading-snug text-white backdrop-blur-sm sm:text-base">
+                <h3 className="w-fit max-w-full text-sm font-semibold leading-snug text-white transition-colors duration-300 ease-in-out group-hover:text-black sm:text-base">
                   {project.title}
                 </h3>
                 {project.tags && project.tags.length > 0 && (
@@ -49,7 +49,11 @@ export default function ProjectsSection({ projects }: Props) {
                     {project.tags.map((tag) => (
                       <li
                         key={tag}
-                        className="bg-black/40 px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-white/90 backdrop-blur-sm sm:text-xs"
+                        className="!font-sans border px-1.5 py-0.5 text-[10px] font-medium text-white sm:text-xs"
+                        style={{
+                          backgroundColor: "#012B08",
+                          borderColor: "#4EEB00",
+                        }}
                       >
                         {tag}
                       </li>
