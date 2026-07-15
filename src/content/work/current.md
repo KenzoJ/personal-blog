@@ -1,5 +1,5 @@
 ---
-company: "Film Company"
+company: "GreenlightGO"
 role: "Software Engineer"
 dateStart: "06/01/2024"
 dateEnd: "Current"
@@ -14,5 +14,3 @@ dateEnd: "Current"
 - Implemented an enhanced front-end search experience, resulting in improved customer engagement.
 - Testing and refining HubSpot API integrations for synchronous communication with the AWS database.
 - Transitioned static landing pages to HubSpot’s new Developer Program, adopting React and TypeScript in place of HubL templates.
-
-**Note: Name of company is omitted for privacy reasons.*
